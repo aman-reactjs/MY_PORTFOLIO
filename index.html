@@ -4,35 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>My Portfolio</title><link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
    <header>
-    <div class="main-nav">
-    <div class="nav">
-        <div class="right-nav">
-            <span>AMAN</span>
-             <h3><b>SHARMA</b></h3>
-        </div>
-        <div class="left-nav">
-            <ul>
-                <a href="/"><b>Home</b></a>
-                <a ><li>LinkdIn</li></a>
-                <a ><li>Instagram</li></a>
-                <a ><li>GitHub</li></a>
-                <a href="/about"><li>About</li></a>
-            </ul>
-        </div>
-    </div>
-    </div>
+       <div id="navbar"></div>
    </header>
+   
+
    <main>
     <div class="container">
     <div class="myBio">
-        <h1>Hi, I'm <span>Aman Sharma</span> </h1>
+        <!-- <h1>Hi, I'm <span>Aman Sharma</span> </h1>
         
-        <h3>Frontend Developer</h3>
+        <h3>Frontend Developer</h3> -->
+    <h1 id="intro-text"></h1>
+<h2><span id="changing-text"></span></h2>
         <br>
         <p>  I am Aman Sharma, a passionate Front-End Developer with 
             a keen eye for creating 
@@ -44,17 +33,38 @@
     <img class="myImage" src="cartoon_image-removebg-preview.png" alt="" width="300px" height="350px">
     </div>
     <div class="btn">
-    <button class="hireBtn">Hire</button>
+    <button class="hireBtn">Hire Me</button>
     <button class="experienceBtn">Experience</button>
     </div>
     <div class="social-media">
         <nav>
-    <a id="social-insta" href="https://www.linkedin.com/in/aman-sharma-152897332/"><i class="fa-brands fa-instagram"></i></a>
-    <a id="social-facebook" href="https://www.instagram.com/lakshm1338/"><i class="fa-brands fa-facebook"></i><a>
-    <a id="social-link" href="https://github.com/aman-reactjs"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a id="social-insta" href="https://www.linkedin.com/in/aman-sharma-152897332/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a id="social-facebook" href="https://www.instagram.com/lakshm1338/" target="_blank"><i class="fa-brands fa-facebook"></i><a>
+    <a id="social-link" href="https://github.com/aman-reactjs" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
     </nav>
     </div>
     </div> 
+    <hr>
+    <div class="motivation-head">
+        my name is Aman Sharma
+    </div>
+    <div class="sec-section">
+        <div class="sec-section-div">
+            <img id="sec-image" src="image_2.jpeg" alt="">
+   
+        </div>
+       </div>
+<div class="main-section">
+    <span class="section-img1">
+    </span>
+    <span class="section-img2">
+    </span>
+    <span class="section-img3">
+    </span>
+    <span class="section-img4">
+    </span>
+    </div>
+    
    </main>
    <footer>
     <div class="footer">
@@ -64,11 +74,11 @@
             <div class="my-socialLink">
             <ul class="my-link">
                 <h3>Contact me</h3>
-                <li ><a href="https://www.linkedin.com/in/aman-sharma-152897332/">LinkdIn</a></li>
-                <li ><a href="https://www.instagram.com/lakshm1338/">Instagram</a></li>
-                <li ><a href="https://github.com/aman-reactjs">GitHub</a></li>
+                <li ><a href="https://www.linkedin.com/in/aman-sharma-152897332/" target="_blank">LinkdIn</a></li>
+                <li ><a href="https://www.instagram.com/lakshm1338/" target="_blank">Instagram</a></li>
+                <li ><a href="https://github.com/aman-reactjs" target="_blank">GitHub</a></li>
                 <li ><a href="">Facebook</a></li>
-                <li ><a href="mailto:amanvashishtha606@gmail.com">Gmail</a></li>
+                <li ><a href="mailto:amanvashishtha606@gmail.com" target="_blank">Gmail</a></li>
             </ul>
         </div>
         <div class="pages">
@@ -92,6 +102,7 @@
     </div>
    
    </footer>
+ 
     <script src="./script.js"></script>
 </body>
 </html>

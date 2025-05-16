@@ -1,9 +1,90 @@
-// width: 100px;
-// height: auto;
-// /* background-color: red; */
-// padding: 0 0 0 20px;
-// margin: 0 0 0 150px;
-// text-decoration: none;
-// font-size: 15px;
-// text-decoration: none;
-// list-style: none;
+ fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+
+
+
+const intro = "Hi, I am Aman Sharma";
+const roles = ["Frontend Developer","React Developer", "Web Developer", "UI/UX Designer", "JavaScript Coder"];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let currentText = "";
+
+function typeIntro(i = 0) {
+  if (i < intro.length) {
+    document.getElementById("intro-text").textContent += intro.charAt(i);
+    setTimeout(() => typeIntro(i + 1), 100);
+  } else {
+    typeEffect(); 
+  }
+}
+
+  function typeEffect() {
+    const display = document.getElementById("changing-text");
+
+    if (!isDeleting && charIndex <= roles[wordIndex].length) {
+      currentText = roles[wordIndex].substring(0, charIndex);
+      charIndex++;
+    } else if (isDeleting && charIndex >= 0) {
+      currentText = roles[wordIndex].substring(0, charIndex);
+      charIndex--;
+    }
+
+    display.textContent = currentText;
+
+    let delay = isDeleting ? 60 : 100;
+
+    if (!isDeleting && charIndex === roles[wordIndex].length) {
+      isDeleting = true;
+      delay = 1000;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % roles.length;
+    }
+
+    setTimeout(typeEffect, delay);
+  }
+
+
+  typeIntro();
+
+
+let hireBtn = document.querySelector(".hireBtn");
+
+//Hire button by Linkdin
+let hireMe = ()=>{
+  window.open("https://www.linkedin.com/in/aman-sharma-152897332/", "_blank");
+}
+
+hireBtn.addEventListener("click", hireMe)
+
+
+//Using api
+
+  let motivation= document.querySelector(".motivation-head");
+
+   let fetchQuote =async()=>{
+    try{
+      let response = await fetch("")
+       if(!response.ok){
+       motivation.textContent=("HTTp error! Status" + response.status);
+       return;
+      }
+      let data = await response.json()
+      console.log(response)
+    }
+    catch(er){
+      console.log("Error :",er);
+    }
+  }
+
+  fetchQuote();
+
+  fetch("navbar.html")
+  .then(res=>res.text())
+  .then(data=>{
+    document.querySelector(".navbar").innerHTML=data;
+  });
