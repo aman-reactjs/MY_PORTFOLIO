@@ -63,28 +63,40 @@ hireBtn.addEventListener("click", hireMe)
 
 
 //Using api
-
-  let motivation= document.querySelector(".motivation-head");
-
-   let fetchQuote =async()=>{
-    try{
-      let response = await fetch("")
-       if(!response.ok){
-       motivation.textContent=("HTTp error! Status" + response.status);
-       return;
-      }
-      let data = await response.json()
-      console.log(response)
-    }
-    catch(er){
-      console.log("Error :",er);
-    }
-  }
-
-  fetchQuote();
-
+  
   fetch("navbar.html")
   .then(res=>res.text())
   .then(data=>{
-    document.querySelector(".navbar").innerHTML=data;
+    // document.querySelector(".navbar").innerHTML=data;
   });
+
+
+  const navLink = document.querySelectorAll(".nav_class");
+ 
+  navLink.forEach((link)=>{
+    link.addEventListener("click",()=>{
+      document.querySelector(".active").classList.remove("active");
+      link.classList.add("active")
+    })
+  })
+
+    let motivation= document.querySelector(".motivation-head");
+
+  // let motivaBtn=document.getElementById("motivationBtn");
+
+  const handleData= async()=>{
+    try{
+
+      let res = await fetch("https://zenquotes.io/api/random")
+      if(res.ok)(
+        console.log("Error")
+      )
+      let data = res.json();
+      console.log(data)
+    }
+    catch(er){
+      console.log(`error  ${er.message}`)
+    }
+  }
+  handleData()
+  // motivaBtn.addEventListener("click", handleData)

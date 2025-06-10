@@ -1,28 +1,41 @@
-<!-- navbar.html -->
- <!-- <link rel="stylesheet" href="style.css"> -->
-<!-- HTML -->
- <style>
-.navbar {
-  display: flex;
-  gap: 100px;      
-  padding: 15px 30px;
-}
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
+ <nav>
+  <div class="navLink">
+    <div class="left-navLink">
+      <h2>AMAN.<span>PORTFOLIO</span></h2>
+    </div>
+    <div class="right-navLink">
+      <ul>
+        <li><a href="./index.html" class=" nav_class active">Home</a></li>
+        <li><a href="./resume.html" class="nav_class ">Resume</a></li>
+        <li><a href="./about.html" class=" nav_class ">About</a></li>
+        <li><a href="./project.html" class=" nav_class ">Project</a></li>
+      </ul>
+    </div>
+  </div>
+ </nav>
+<script>
+  const navLinks = document.querySelectorAll(".nav_class");
+  const currentPage = window.location.pathname.split("/").pop();
 
-.navbar a:hover {
-  color: yellow;
-}
+  navLinks.forEach((link) => {
+    const linkPage = link.getAttribute("href").split("/").pop();
+    if (linkPage === currentPage) {
+      link.classList.remove("active");
+    }
+  });
+</script>
 
- </style>
-<nav class="navbar">
-  <a href="index.html">Home</a>
-  <a href="resume.html">Resume</a>
-  <a href="about.html">About</a>
-</nav>
+
+<!-- <nav class="navbar">
+  <div id="logoDesign">
+    <h2>AMAN.<span>PORTFOLIO</span></h2>
+  </div>
+  <div class="left-navbar">
+
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="about.html">About</a>
+    <a href="project.html">Project</a>
+  </div>
+</nav> -->
