@@ -1,22 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>My Portfolio-Contact</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* AI-like Theme Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #f1f5f9;
+    }
+
+    header {
+      background-color: #0f172a;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    #projects {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      color: #7b828b;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .project-card {
+      background-color: #1e293b;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(56, 189, 248, 0.2);
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #0f172a;
+      background-color: #38bdf8;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .project-card a:hover {
+      background-color: #0ea5e9;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      .section-subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <style>
-  *{
-    padding: 0;
-    margin: 0;
-  }
- 
-</style>
-    <div id="navbar"></div>
-    <h1>My name is project</h1>
+  
+  <header>
+        <div id="navbar"></div>
   </header>
- <script src="./script.js"></script>
+
+  <section id="projects" class="project-section">
+    <h2 class="section-title">🚀 Projects</h2>
+    <p class="section-subtitle">Here are some of the awesome projects I’ve worked on:</p>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h3>🌦️ Weather App</h3>
+        <p>A React-based app that shows live weather using OpenWeatherMap API.</p>
+        <a href="https://react-weather-app-xi-ochre.vercel.app/" target="_blank">Live Demo</a>
+        <a href="https://github.com/aman-reactjs/React_Weather_App" target="_blank">Source Code</a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h3>💱 Currency Converter</h3>
+        <p>Built with React and Frankfurter API to convert real-time currencies.</p>
+        <a href="https://currency-converter-react-pearl.vercel.app/" target="_blank">Live Demo</a>
+        <a href="https://github.com/aman-reactjs/Currency-Converter-React" target="_blank">Source Code</a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h3>📝 Portfolio Website</h3>
+        <p>Fully responsive personal portfolio made with HTML, CSS, and JavaScript.</p>
+        <a href="https://my-portfolio-ten-gray-82.vercel.app/" target="_blank">Live Demo</a>
+        <a href="https://github.com/aman-reactjs/MY_PORTFOLIO" target="_blank">Source Code</a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
