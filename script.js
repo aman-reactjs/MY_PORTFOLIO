@@ -80,23 +80,9 @@ hireBtn.addEventListener("click", hireMe)
     })
   })
 
-    let motivation= document.querySelector(".motivation-head");
+ 
 
-  // let motivaBtn=document.getElementById("motivationBtn");
 
-  const handleData= async()=>{
-    try{
 
-      let res = await fetch("https://zenquotes.io/api/random")
-      if(res.ok)(
-        console.log("Error")
-      )
-      let data = res.json();
-      console.log(data)
-    }
-    catch(er){
-      console.log(`error  ${er.message}`)
-    }
-  }
-  handleData()
-  // motivaBtn.addEventListener("click", handleData)
+
+ 

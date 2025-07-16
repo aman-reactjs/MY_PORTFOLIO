@@ -18,9 +18,6 @@
    <main>
     <div class="container">
     <div class="myBio">
-        <!-- <h1>Hi, I'm <span>Aman Sharma</span> </h1>
-        
-        <h3>Frontend Developer</h3> -->
     <h1 id="intro-text"></h1>
 <h2><span id="changing-text"></span></h2>
         <br>
@@ -34,76 +31,72 @@
     <img class="myImage" src="cartoon_image-removebg-preview.png" alt="" width="300px" height="350px">
     </div>
     <div class="btn">
-    <button class="hireBtn"><a href="https://www.linkedin.com/in/aman-sharma-152897332/">Hire Me</a></button>
+    <button class="hireBtn"><a href="mailto:amanvashishtha606@gmail.com">Hire Me</a></button>
+
     <button class="experienceBtn"><a href="./resume.html">Experience</a></button>
     </div>
+
     <div class="social-media">
         <nav>
-    <a id="social-insta" href="https://www.linkedin.com/in/aman-sharma-152897332/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-    <a id="social-facebook" href="https://www.instagram.com/lakshm1338/" target="_blank"><i class="fa-brands fa-facebook"></i>
-    <a id="social-link" href="https://github.com/aman-reactjs" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a id="social-insta" href= "https://www.instagram.com/aman_vashishtha_01/"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a id="social-facebook" href= "https://www.facebook.com/aman.vashishtha.9843"target="_blank"><i class="fa-brands fa-facebook"></i>
+    <a id="social-link" href="https://www.linkedin.com/in/aman-sharma-152897332/"target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
     </nav>
     </div>
     </div> 
     <hr>
-    <div class="motivation-head">
-        my name is Aman Sharma
-        <!-- <button id="motivationBtn">Get Quote</button> -->
+   <section class="hero-motivation">
+  <div class="motivation-content">
+    <h1> Rise. Code. Repeat.</h1>
+    <p>
+      I’m <strong>Aman Sharma</strong> — a dreamer with a keyboard, turning pixels into purpose.<br>
+      Every line of code I write is a step toward my vision: <br>
+      <em>“To inspire, build, and leave a mark on the web.”</em>
+    </p>
+    <div class="quote-box">
+      <q>Don't wait for opportunity. Create it.</q>
     </div>
-    <div class="sec-section">
-        <div class="sec-section-div">
-            <img id="sec-image" src="image_2.jpeg" alt="">
-   
-        </div>
-       </div>
-<div class="main-section">
-    <span class="section-img1">
-    </span>
-    <span class="section-img2">
-    </span>
-    <span class="section-img3">
-    </span>
-    <span class="section-img4">
-    </span>
+    <a href="./project.html" class="motivation-btn"> View My Projects</a>
+  </div>
+</section>
+
+<section id="about-me" class="about-section">
+  <div class="about-container">
+    <h2 class="section-title"> About Me</h2>
+    
+    <div class="about-points">
+      <div class="point">
+        <h3> Passionate Developer</h3>
+        <p>I love building interactive, user-friendly websites with HTML, CSS, JS, and React. Every line of code is crafted with purpose and care.</p>
+      </div>
+      <div class="point">
+        <h3> Strong Problem Solver</h3>
+        <p>I enjoy debugging and solving real-world problems using clean logic and structured thinking. Coding teaches me patience and precision.</p>
+      </div>
+      <div class="point">
+        <h3> Always Learning</h3>
+        <p>I'm committed to lifelong learning — whether it's mastering new frameworks or improving UI/UX designs. Growth is my mindset.</p>
+      </div>
     </div>
     
-   </main>
-   <footer>
-    <div class="footer">
-      
-        <p><b>© 2025 Aman Sharma. All Rights Reserved.
-            Designed & Developed by Aman Sharma. </b></p>
-            <div class="my-socialLink">
-            <ul class="my-link">
-                <h3>Contact me</h3>
-                <li ><a href="https://www.linkedin.com/in/aman-sharma-152897332/" target="_blank">LinkdIn</a></li>
-                <li ><a href="https://www.instagram.com/aman_vashishtha_01/" target="_blank">Instagram</a></li>
-                <li ><a href="https://github.com/aman-reactjs" target="_blank">GitHub</a></li>
-                <li ><a href="https://www.facebook.com/aman.vashishtha.9843">Facebook</a></li>
-                <li ><a href="mailto:amanvashishtha606@gmail.com" target="_blank">Gmail</a></li>
-            </ul>
-        </div>
-        <div class="pages">
-            <ul class="pagesLinks">
-                    <h3 class="pagesLinks-h3">Navigation</h3>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a> </li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
-            <div class="pages">
-                <ul class="pagesLinks">
-                    <h3>Projects</h3>
-                    <li><a href="">YouTube Clone</a></li>
-                    <li><a href="">Login Page</a> </li>
-                    <li><a href="">Whether App</a></li>
-                    <li><a href="">To DO List</a></li>
-                </ul>
-            </div>
+    <p class="quote-line">
+        <em>"Building experiences, not just websites."</em>
+    </p>
+    <a href="./about.html" class="scroll-btn"> About Me</a>
+  </div>
+</section>
+   </div>
     </div>
    
    </footer>
+
+   <script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('beforeend', data);
+    });
+</script>
  
     <script src="./script.js"></script>
 </body>

@@ -7,22 +7,22 @@
     <div class="right-navLink">
       <ul>
         <li><a href="./index.html" class=" nav_class active">Home</a></li>
+        <li><a href="./project.html" class=" nav_class ">Project</a></li>
         <li><a href="./resume.html" class="nav_class ">Resume</a></li>
         <li><a href="./about.html" class=" nav_class ">About</a></li>
-        <li><a href="./project.html" class=" nav_class ">Project</a></li>
       </ul>
     </div>
   </div>
  </nav>
 <script>
-  const navLinks = document.querySelectorAll(".nav_class");
-  const currentPage = window.location.pathname.split("/").pop();
+ const navLinks = document.querySelectorAll(".nav_class");
+const currentPage = window.location.pathname.split("/").pop();
 
-  navLinks.forEach((link) => {
-    const linkPage = link.getAttribute("href").split("/").pop();
-    if (linkPage === currentPage) {
-      link.classList.remove("active");
-    }
-  });
+navLinks.forEach((link) => {
+  const linkPage = link.getAttribute("href").split("/").pop();
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});
 </script>
 
